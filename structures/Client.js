@@ -66,9 +66,7 @@ async function loadCommands() {
 
 
             if (pull.aliases && Array.isArray(pull.aliases)) {
-                pull.aliases.forEach(alias => client.aliases.set(alias, {
-                    pull
-                }))
+                pull.aliases.forEach(alias => client.aliases.set(alias, pull.name));
             }
         }
     })
