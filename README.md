@@ -19,7 +19,7 @@ I made this **handler** template keeping in mind that you know the basics of js 
 ## ___Installation___
 #### ___1. Clone the repository___
 ```bash
-git clone https://github.com/flam3face/advanced-handler.git
+git clone https://github.com/flam3face/discord-pro-handler.git
 ```
 
 #### ___2. Install the dependencies___
