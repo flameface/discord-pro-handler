@@ -15,6 +15,8 @@ client.commands = new Collection();
 client.aliases = new Collection();
 client.slashCommands = new Collection();
 
+module.exports = client;
+
 (async () => {
     await loadCommands();
     await loadEvents();
@@ -148,5 +150,3 @@ async function loadSlashCommands() {
         console.log(error);
     }
 }
-
-module.exports = client;

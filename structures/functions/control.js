@@ -15,12 +15,8 @@ async function reloadCommands(name) {
             return `Couldn't reload the command ${command.name}, error: Missing a name, description or run function.`
         }
 
-        client.commands.set(newCommand.name, {
-            name: newCommand.name,
-            description: newCommand.description,
-            category: command.category,
-            run: newCommand.run
-        });
+        newCommand.category = command.category;
+        client.commands.set(newCommand.name, newCommand);
 
         return `Reloaded command : ${newCommand.name}`
     } catch (err) {
@@ -43,12 +39,8 @@ async function reloadSlash(name) {
             return `Couldn't reload the command ${command.name}, error: Missing a name, description or run function.`
         }
 
-        client.slashCommands.set(newCommand.name, {
-            name: newCommand.name,
-            description: newCommand.description,
-            category: command.category,
-            run: newCommand.run
-        });
+        newCommand.category = command.category;
+        client.slashCommands.set(newCommand.name, newCommand);
 
         return `Reloaded slash command : ${newCommand.name}`
     } catch (err) {
